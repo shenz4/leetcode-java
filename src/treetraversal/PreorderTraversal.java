@@ -17,8 +17,8 @@ public class PreorderTraversal {
 
         while (!stack.isEmpty()) {
 
-            TreeNode p;
-            if ((p = stack.pop()) == null) {
+            TreeNode p = stack.pop();
+            if (p == null) {
                 continue;
             }
 
