@@ -7,9 +7,6 @@ package linkedlist;
 public class ReverseList {
     // 迭代实现
     public ListNode reverseList(ListNode head) {
-        if (head == null || head.next == null){
-            return head;
-        }
 
         ListNode pre = null, p = head;
         while (p != null){
@@ -33,5 +30,4 @@ public class ReverseList {
         head.next = null;
         return last;
     }
-
 }

@@ -1,8 +1,9 @@
-import treetraversal.TreeNode;
+package tree;
+
+import tree.TreeNode;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Stack;
 
 /**
  * Leetcode 113:

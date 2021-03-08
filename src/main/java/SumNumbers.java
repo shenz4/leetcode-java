@@ -1,4 +1,4 @@
-import treetraversal.TreeNode;
+import tree.TreeNode;
 
 import java.util.ArrayList;
 

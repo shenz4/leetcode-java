@@ -1,4 +1,4 @@
-import treetraversal.TreeNode;
+import tree.TreeNode;
 
 /**
  * Leetcode 101:

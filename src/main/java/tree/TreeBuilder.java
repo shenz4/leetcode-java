@@ -1,4 +1,4 @@
-package treetraversal;
+package tree;
 
 public class TreeBuilder {
     TreeNode getTree() {

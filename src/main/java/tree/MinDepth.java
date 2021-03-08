@@ -1,4 +1,6 @@
-import treetraversal.TreeNode;
+package tree;
+
+import tree.TreeNode;
 
 /**
  * Leetcode 111:

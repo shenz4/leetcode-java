@@ -1,4 +1,4 @@
-package treetraversal;
+package tree;
 
 import java.util.List;
 
