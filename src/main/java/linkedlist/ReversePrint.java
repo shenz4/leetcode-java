@@ -1,27 +1,28 @@
 package linkedlist;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
+import java.util.LinkedList;
 
 /**
  * 剑指Offer 06：
  * 输入一个链表的头节点，从尾到头反过来返回每个节点的值（用数组返回）。
  */
 public class ReversePrint {
-    ArrayList arrayList =new ArrayList();
+    int[] res = new int[10000];
+    int index = 0;
 
     public int[] reversePrint(ListNode head) {
-        if (head == null){
-            return Collections.;
-        }
-
-        print(head);
+        reverse(head);
+        return Arrays.copyOf(res, index);
     }
 
-    private void print(ListNode head) {
-        if (head.next == null){
-            arrayList.add()
+    private void reverse(ListNode head) {
+        if (head == null) {
+            return;
         }
+        reverse(head.next);
+        res[index++] = head.val;
     }
 }
-// 没通过

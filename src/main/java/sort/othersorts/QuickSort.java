@@ -14,7 +14,7 @@ public class QuickSort {
     private static void quickSort(int array[], int low, int high) {
 
         // 出口
-        if (low >= high){
+        if (low >= high) {
             return;
         }
 
@@ -33,7 +33,7 @@ public class QuickSort {
             while (leftIndex < rightIndex && array[leftIndex] <= key) {
                 leftIndex++;
             }
-            if (leftIndex != rightIndex){
+            if (leftIndex != rightIndex) {
                 int swap = array[leftIndex];
                 array[leftIndex] = array[rightIndex];
                 array[rightIndex] = swap;
@@ -42,7 +42,34 @@ public class QuickSort {
         array[low] = array[rightIndex];
         array[rightIndex] = key;
 
-        quickSort(array, low, rightIndex-1);
-        quickSort(array, rightIndex+1, high);
+        quickSort(array, low, rightIndex - 1);
+        quickSort(array, rightIndex + 1, high);
+    }
+
+    private static void quickSort2(int array[], int start, int end) {
+
+        if (end - start <= 0) {
+            return;
+        }
+
+        int pivot = array[start];
+        int left = start, right = end;
+
+        while (left < right) {
+
+            while (left < right && array[right] >= pivot) {
+                right--;
+            }
+            array[left] = array[right];
+
+            while (left < right && array[left] < pivot) {
+                left++;
+            }
+            array[right] = array[left];
+        }
+        array[left] = pivot;
+
+        quickSort(array, left, right - 1);
+        quickSort(array, right + 1, right);
     }
 }
