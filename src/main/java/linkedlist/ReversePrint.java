@@ -1,9 +1,6 @@
 package linkedlist;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
-import java.util.LinkedList;
 
 /**
  * 剑指Offer 06：
