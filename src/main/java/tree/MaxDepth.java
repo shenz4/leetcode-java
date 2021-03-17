@@ -1,7 +1,5 @@
 package tree;
 
-import tree.TreeNode;
-
 /**
  * Leetcode 104:
  * 给定一个二叉树，找出其最大深度。
@@ -20,6 +18,9 @@ public class MaxDepth {
             return 0;
         }
 
-        return Math.max(getMaxDepth(node.left), getMaxDepth(node.right)) + 1;
+        int left = getMaxDepth(node.left);
+        int right = getMaxDepth(node.right);
+
+        return Math.max(left, right) + 1;
     }
 }

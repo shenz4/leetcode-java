@@ -1,4 +1,4 @@
-import tree.TreeNode;
+package tree;
 
 /**
  * Leetcode 101:
