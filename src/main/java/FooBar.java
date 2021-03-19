@@ -4,7 +4,7 @@ import java.util.concurrent.Semaphore;
  * Leetcode 1115:
  * 交替打印FooBar
  */
-class FooBar {
+public class FooBar {
     private int n;
     private Semaphore sema_foo = new Semaphore(0);
     private Semaphore sema_bar = new Semaphore(0);

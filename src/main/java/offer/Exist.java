@@ -15,8 +15,8 @@ public class Exist {
 
         this.boards = board;
         this.words = word.toCharArray();
-        int m = board.length;
-        int n = board[0].length;
+        this.m = board.length;
+        this.n = board[0].length;
 
         for (int i = 0; i < m; i++) {
             for (int j = 0; j < n; j++) {
@@ -29,14 +29,14 @@ public class Exist {
     }
 
     private boolean dfs(int i, int j, int index) {
-        // 终止条件
-        if (index == words.length) {
-            return true;
+        // dfs终止
+        if (index >= words.length || i < 0 || i >= m || j < 0 || j >= n || boards[i][j] != words[index]) {
+            return false;
         }
 
-        // 减枝
-        if (i < 0 || i >= m || j < 0 || j >= n || boards[i][j] != words[index]) {
-            return false;
+        // 更新结果
+        if (index == words.length-1) {
+            return true;
         }
 
         char tmp = boards[i][j];

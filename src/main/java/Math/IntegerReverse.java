@@ -1,3 +1,5 @@
+package Math;
+
 /**
  * Leetcode 7:
  * 给你一个 32 位的有符号整数 x ，返回 x 中每位上的数字反转后的结果。
@@ -16,11 +18,11 @@ public class IntegerReverse {
         int res = 0;
         while (x != 0) {
             int remainder = x % 10;
-            if (res > Integer.MAX_VALUE / 10 || (res == Integer.MAX_VALUE && remainder > Integer.MAX_VALUE % 10)) {
+            if (res > Integer.MAX_VALUE / 10 || (res == Integer.MAX_VALUE/10 && remainder > Integer.MAX_VALUE % 10)) {
                 return 0;
             }
 
-            if (res < Integer.MIN_VALUE / 10 || (res == Integer.MAX_VALUE && remainder < Integer.MIN_VALUE % 10)) {
+            if (res < Integer.MIN_VALUE / 10 || (res == Integer.MAX_VALUE/10 && remainder < Integer.MIN_VALUE % 10)) {
                 return 0;
             }
 
